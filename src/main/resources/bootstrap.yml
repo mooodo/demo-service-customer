@@ -7,12 +7,6 @@ spring:
       suffix: .jsp
   profiles:
       active: dev
-  cloud:
-    config:
-      failFast: true
-      discovery:
-        enabled: true
-        serviceId: service-config
 
 # change those config in prod ?
 eureka:
@@ -22,6 +16,8 @@ eureka:
 ---
 spring:
   profiles: dev
+  sleuth:
+    enabled: false
 server:
   port: 9002   
 
@@ -32,6 +28,12 @@ eureka:
 ---
 spring:
   profiles: docker
+  cloud:
+    config:
+      failFast: true
+      discovery:
+        enabled: true
+        serviceId: service-config
 
 server:
   port: ${SERVICE_PORT:9002}
@@ -39,8 +41,5 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: ${REGISTRY_URL}
 
 
