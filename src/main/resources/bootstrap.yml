@@ -41,5 +41,7 @@ server:
 eureka:
   instance:
     prefer-ip-address: true
-
-
+  client:
+    service-url:
+      defaultZone: ${REGISTRY_URL}
+      
