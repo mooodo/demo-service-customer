@@ -23,8 +23,6 @@ eureka:
 ---
 spring:
   profiles: dev
-  sleuth:
-    enabled: false
 server:
   port: 9002   
 
