@@ -20,6 +20,10 @@ eureka:
   instance:
     #lease-expiration-duration-in-seconds: 30
     #lease-renewal-interval-in-seconds: 10
+logging:
+  level:
+    com.demo.customer: debug
+    com.demo.support: debug
 ---
 spring:
   profiles: dev
