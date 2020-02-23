@@ -17,6 +17,7 @@ demo-service2-support   各业务微服务（有数据库访问）底层技术�
 demo-service2-customer  用户管理微服务（有数据库访问）
 demo-service2-product   产品管理微服务（有数据库访问）
 demo-service2-supplier  供应商管理微服务（有数据库访问）
+demo-service2-order     订单管理微服务（有数据库访问）
 ```
 本框架简单易用、支持DDD与微服务，它有如下几个特点：
 ## 1. 易于业务变更与维护
