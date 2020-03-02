@@ -15,11 +15,11 @@ spring:
       #   enabled: true
       #   serviceId: service-config
 
-# change those config in prod ?
-eureka:
-  instance:
-    #lease-expiration-duration-in-seconds: 30
-    #lease-renewal-interval-in-seconds: 10
+management:
+  endpoints:
+    web:
+      exposure: 
+        include: 'hystrix.stream'
 logging:
   level:
     com.demo.customer: debug
