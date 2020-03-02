@@ -15,11 +15,6 @@ spring:
       #   enabled: true
       #   serviceId: service-config
 
-management:
-  endpoints:
-    web:
-      exposure: 
-        include: 'hystrix.stream'
 logging:
   level:
     com.demo.customer: debug
