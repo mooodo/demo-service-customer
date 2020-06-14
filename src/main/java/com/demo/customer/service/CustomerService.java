@@ -23,6 +23,11 @@ public interface CustomerService {
 	 */
 	public void delete(String id);
 	/**
+	 * @param id
+	 * @return the customer with the id
+	 */
+	public Customer get(String id);
+	/**
 	 * @return all of the customers
 	 */
 	public List<Customer> listOfCustomers();

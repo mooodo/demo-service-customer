@@ -6,7 +6,7 @@ package com.demo.customer.entity;
 import java.util.Date;
 
 /**
- * 
+ * The entity of customer
  * @author fangang
  */
 public class Customer {
@@ -16,7 +16,7 @@ public class Customer {
 	private Date birthday;
 	private String identification;
 	private String phoneNumber;
-	//private List<Address> addresses;
+	
 	public Customer() {
 		super();
 	}

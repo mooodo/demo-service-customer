@@ -11,7 +11,4 @@
 	<bean id="customerQry" class="com.demo.support.service.impl.QueryServiceImpl">
 		<property name="queryDao" ref="customerQueryDao"></property>
 	</bean>
-	<bean id="customer" class="com.demo.customer.service.impl.CustomerServiceImpl">
-		<property name="dao" ref="customerDao"></property>
-	</bean>
 </beans>

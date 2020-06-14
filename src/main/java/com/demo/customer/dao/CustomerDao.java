@@ -23,7 +23,12 @@ public interface CustomerDao {
 	 */
 	public void delete(String id);
 	/**
-	 * @return all if the customers
+	 * @param id
+	 * @return the customer with the id
+	 */
+	public Customer get(String id);
+	/**
+	 * @return all of the customers
 	 */
 	public List<Customer> list();
 }

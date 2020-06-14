@@ -5,6 +5,9 @@ package com.demo.customer.service.impl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.demo.customer.dao.CustomerDao;
 import com.demo.customer.entity.Customer;
 import com.demo.customer.service.CustomerService;
@@ -13,7 +16,9 @@ import com.demo.customer.service.CustomerService;
  * The implement of the customer service
  * @author fangang
  */
+@Service
 public class CustomerServiceImpl implements CustomerService {
+	@Autowired
 	private CustomerDao dao;
 	/**
 	 * @return the dao
@@ -38,6 +43,10 @@ public class CustomerServiceImpl implements CustomerService {
 	@Override
 	public List<Customer> listOfCustomers() {
 		return dao.list();
+	}
+	@Override
+	public Customer get(String id) {
+		return dao.get(id);
 	}
 
 }

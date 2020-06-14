@@ -15,7 +15,7 @@ import com.demo.customer.repository.CustomerRepository;
  * The implement of the customer dao
  * @author fangang
  */
-@Repository("customerDao")
+@Repository
 public class CustomerDaoImpl implements CustomerDao {
 	private CustomerRepository repository = CustomerRepository.getInstance();
 	@Override
@@ -29,6 +29,10 @@ public class CustomerDaoImpl implements CustomerDao {
 	@Override
 	public List<Customer> list() {
 		return repository.list();
+	}
+	@Override
+	public Customer get(String id) {
+		return repository.get(id);
 	}
 
 }
