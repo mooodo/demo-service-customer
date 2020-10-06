@@ -3,7 +3,7 @@
  */
 package com.demo.customer.dao;
 
-import java.util.List;
+import java.util.Collection;
 
 import com.demo.customer.entity.Customer;
 
@@ -13,10 +13,15 @@ import com.demo.customer.entity.Customer;
  */
 public interface CustomerDao {
 	/**
-	 * save a customer
+	 * insert a customer
 	 * @param customer
 	 */
-	public void save(Customer customer);
+	public void insert(Customer customer);
+	/**
+	 * update a customer
+	 * @param customer
+	 */
+	public void update(Customer customer);
 	/**
 	 * delete a customer
 	 * @param id
@@ -30,5 +35,5 @@ public interface CustomerDao {
 	/**
 	 * @return all of the customers
 	 */
-	public List<Customer> list();
+	public Collection<Customer> list();
 }

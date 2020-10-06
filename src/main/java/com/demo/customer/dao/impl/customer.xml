@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objs>
+  <customer id="10001" name="John" sex="male" birthday="1982-03-12" identification="110120198203127712" phoneNumber="13601327812"/>
+  <customer id="10002" name="Jack" sex="male" birthday="1982-07-09" identification="110120198207098819" phoneNumber="13612128881"/>
+  <customer id="10003" name="Hanna" sex="female" birthday="1985-12-09" identification="110120198512092312" phoneNumber="13633447899"/>
+  <customer id="10004" name="Anna" sex="female" birthday="1985-11-09" identification="110120198511092312" phoneNumber="13677122121"/>
+  <customer id="10005" name="Mike" sex="male" birthday="1985-02-09" identification="110120198502098829" phoneNumber="13612128881"/>
+</objs>

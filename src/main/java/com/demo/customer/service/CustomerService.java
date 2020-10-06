@@ -3,7 +3,7 @@
  */
 package com.demo.customer.service;
 
-import java.util.List;
+import java.util.Collection;
 
 import com.demo.customer.entity.Customer;
 
@@ -13,10 +13,15 @@ import com.demo.customer.entity.Customer;
  */
 public interface CustomerService {
 	/**
-	 * save a customer
+	 * create a customer.
 	 * @param customer
 	 */
-	public void save(Customer customer);
+	public void create(Customer customer);
+	/**
+	 * modify a customer
+	 * @param customer
+	 */
+	public void modify(Customer customer);
 	/**
 	 * delete a customer
 	 * @param id
@@ -30,5 +35,5 @@ public interface CustomerService {
 	/**
 	 * @return all of the customers
 	 */
-	public List<Customer> listOfCustomers();
+	public Collection<Customer> listOfAll();
 }

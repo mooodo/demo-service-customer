@@ -3,7 +3,7 @@
  */
 package com.demo.customer.web;
 
-import java.util.List;
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,12 +11,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.customer.entity.Customer;
 import com.demo.customer.service.CustomerService;
-
-import feign.Body;
 
 /**
  * The controller for customer.
@@ -33,10 +30,16 @@ public class CustomerController {
 		return "product/index";
 	}
 	
-	@PostMapping("save")
+	@PostMapping("register")
 	@ResponseBody
-	public void save(Customer customer) {
-		service.save(customer);
+	public void register(Customer customer) {
+		service.create(customer);
+	}
+
+	@PostMapping("modify")
+	@ResponseBody
+	public void modify(Customer customer) {
+		service.modify(customer);
 	}
 	
 	@GetMapping("delete")
@@ -53,7 +56,7 @@ public class CustomerController {
 	
 	@GetMapping("listOfAll")
 	@ResponseBody
-	public List<Customer> listOfAll() {
-		return service.listOfCustomers();
+	public Collection<Customer> listOfAll() {
+		return service.listOfAll();
 	}
 }

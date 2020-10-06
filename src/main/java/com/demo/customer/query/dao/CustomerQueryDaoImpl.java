@@ -3,12 +3,12 @@
  */
 package com.demo.customer.query.dao;
 
-import java.util.List;
+import java.util.Collection;
 import java.util.Map;
 
 import org.springframework.stereotype.Repository;
 
-import com.demo.customer.repository.CustomerRepository;
+import com.demo.customer.dao.impl.CustomerFactory;
 import com.demo.support.dao.QueryDao;
 
 /**
@@ -17,15 +17,15 @@ import com.demo.support.dao.QueryDao;
  */
 @Repository("customerQueryDao")
 public class CustomerQueryDaoImpl implements QueryDao {
-	private CustomerRepository repository = CustomerRepository.getInstance();
+	private CustomerFactory factory = CustomerFactory.newInstance();
 	@Override
-	public List<?> query(Map<String, Object> params) {
-		return repository.list();
+	public Collection<?> query(Map<String, Object> params) {
+		return factory.list();
 	}
 
 	@Override
 	public long count(Map<String, Object> params) {
-		return repository.size();
+		return factory.list().size();
 	}
 
 	@Override

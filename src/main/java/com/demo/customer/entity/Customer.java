@@ -5,11 +5,14 @@ package com.demo.customer.entity;
 
 import java.util.Date;
 
+import com.demo.support.entity.Entity;
+
 /**
  * The entity of customer
  * @author fangang
  */
-public class Customer {
+public class Customer extends Entity<String> {
+	private static final long serialVersionUID = -2457907550850366839L;
 	private String id;
 	private String name;
 	private String sex;

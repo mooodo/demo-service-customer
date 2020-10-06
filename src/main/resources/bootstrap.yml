@@ -14,7 +14,6 @@ spring:
       # discovery:
       #   enabled: true
       #   serviceId: service-config
-
 logging:
   level:
     com.demo.customer: debug
@@ -23,7 +22,7 @@ logging:
 spring:
   profiles: dev
 server:
-  port: 9002   
+  port: 9012   
 
 eureka:
   client:
