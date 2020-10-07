@@ -27,7 +27,7 @@ public class CustomerController {
 	
 	@GetMapping("show")
 	public String show() {
-		return "product/index";
+		return "customer/index";
 	}
 	
 	@PostMapping("register")
